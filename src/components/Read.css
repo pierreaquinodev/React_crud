@@ -3,7 +3,6 @@
     flex-direction: column;
     align-items: center;
     height: 600px;
-
     text-align: center;
 }
 
@@ -40,4 +39,17 @@ td {
 
 .editForm {
     margin-bottom: 40px;
+}
+
+input {
+    text-align: center;
+}
+
+.formEditButton {
+    margin-top: 20px;
+    font-size: 18px;
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
 }

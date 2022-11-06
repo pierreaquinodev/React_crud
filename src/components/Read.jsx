@@ -10,6 +10,7 @@ const Read = () => {
     const email = useRef(null);
 
     const [person, setPerson] = useState([]);
+    const [idEditar, setIdEditar] = useState([]);
 
     useEffect(() => {
         async function fetchPerson() {
@@ -43,6 +44,7 @@ const Read = () => {
                     lastName.current.value = res.data.last_name;
                     age.current.value = res.data.age;
                     email.current.value = res.data.email;
+                    setIdEditar(res.data.id);
                 })
                 .catch((err) => {
                     console.log(`Ocorreu um erro: ${err}`);
@@ -51,22 +53,46 @@ const Read = () => {
         getEditPerson();
     }
 
+    async function saveEditForm(e) {
+        e.preventDefault();
+
+        const res = await axios
+            .put(`http://localhost:3000/person/${idEditar}`, {
+                first_name: firstName.current.value,
+                last_name: lastName.current.value,
+                age: age.current.value,
+                email: email.current.value,
+            })
+            .then(() => {
+                console.log("Pessoa alterada");
+                window.location.reload();
+            })
+            .catch((err) => console.log(err));
+    }
+
     return (
         <div className="readContainer">
             <form className="editForm" action="">
-                <label>first name</label>
+                <h1>Edit form</h1>
+                <label>First name</label>
+                <br />
                 <input type="text" ref={firstName} />
                 <br />
-                <label>last name</label>
+                <label>Last name</label>
+                <br />
                 <input type="text" ref={lastName} />
                 <br />
-                <label>age</label>
+                <label>Age</label>
+                <br />
                 <input type="text" ref={age} />
                 <br />
-                <label>email</label>
+                <label>E-mail</label>
+                <br />
                 <input type="text" ref={email} />
                 <br />
-                <button>Save</button>
+                <button className="formEditButton" onClick={saveEditForm}>
+                    Save
+                </button>
             </form>
 
             <table className="personTable">
