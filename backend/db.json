@@ -5,13 +5,6 @@
       "last_name": "teste",
       "age": "23",
       "email": "teste@mail.com",
-      "id": 1
-    },
-    {
-      "first_name": "pessoa",
-      "last_name": "teste",
-      "age": "23",
-      "email": "teste@mail.com",
       "id": 2
     },
     {
@@ -34,6 +27,13 @@
       "age": "23",
       "email": "teste@mail.com",
       "id": 5
+    },
+    {
+      "first_name": "pierre",
+      "last_name": "fulano",
+      "age": "32",
+      "email": "pierreaquino2011@gmail.com",
+      "id": 6
     }
   ]
 }

@@ -2,9 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 70vh;
-    min-height: 70vh;
+    height: 600px;
+
     text-align: center;
 }
 
@@ -37,4 +36,8 @@ td {
 .editButton {
     border: none;
     background-color: transparent;
+}
+
+.editForm {
+    margin-bottom: 40px;
 }
