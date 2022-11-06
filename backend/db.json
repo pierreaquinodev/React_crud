@@ -1,25 +1,11 @@
 {
   "person": [
     {
-      "first_name": "pessoa",
-      "last_name": "teste",
+      "first_name": "Jose",
+      "last_name": "Silva",
       "age": "23",
-      "email": "teste@mdewdwedwe",
-      "id": 3
-    },
-    {
-      "first_name": "pessoa",
-      "last_name": "teste",
-      "age": "23",
-      "email": "teste@mail.com",
-      "id": 5
-    },
-    {
-      "first_name": "pedro",
-      "last_name": "aquino",
-      "age": "12",
-      "email": "pedro@hoodkewowe",
-      "id": 6
+      "email": "email@email.com",
+      "id": 0
     }
   ]
 }
